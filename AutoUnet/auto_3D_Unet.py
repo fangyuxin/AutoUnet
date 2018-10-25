@@ -3,7 +3,6 @@ import torch.nn as nn
 import numpy as np
 
 
-# 这个flatten_model函数还不是很理解.
 flatten_model=lambda m: sum(map(flatten_model, m.children()),[]) if len(list(m.children())) else [m]
 
 def first_ch_sz(model):
